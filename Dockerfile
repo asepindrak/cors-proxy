@@ -1,8 +1,10 @@
 FROM node:18-alpine AS base
 WORKDIR /var/www
 
+ARG URL
 ARG PORT
 ENV PORT=$PORT
+ENV URL=$URL
 
 COPY . .
 
